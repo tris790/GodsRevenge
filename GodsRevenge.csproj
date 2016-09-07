@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63DD2830-831C-412F-9CB8-1FA1BF3E8523}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GodsRevenge</RootNamespace>
+    <AssemblyName>GodsRevenge</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BadUtils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\BadUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Terraria, Version=1.3.1.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Steam Library\steamapps\common\Terraria\Terraria.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buffs\GhostlyBarrierBuff.cs" />
+    <Compile Include="Buffs\InvincibleBuff.cs" />
+    <Compile Include="Buffs\TheChestPetBuff.cs" />
+    <Compile Include="Buffs\DrillMount.cs" />
+    <Compile Include="Buffs\TrainMount.cs" />
+    <Compile Include="Buffs\ExamplePetBuff.cs" />
+    <Compile Include="Buffs\ThomasMinionBuff.cs" />
+    <Compile Include="ChangeSpawnRate.cs" />
+    <Compile Include="CustomDrops.cs" />
+    <Compile Include="Dusts\Bubble.cs" />
+    <Compile Include="Dusts\EtherealFlame.cs" />
+    <Compile Include="Dusts\BlackSmoke.cs" />
+    <Compile Include="Dusts\WilliamDust.cs" />
+    <Compile Include="Dusts\MoneyDust.cs" />
+    <Compile Include="Dusts\ExampleSolution.cs" />
+    <Compile Include="Dusts\Flame.cs" />
+    <Compile Include="Dusts\Negative.cs" />
+    <Compile Include="Dusts\Pixel.cs" />
+    <Compile Include="Dusts\PixelHurt.cs" />
+    <Compile Include="Dusts\PuriumFlame.cs" />
+    <Compile Include="Dusts\Smoke.cs" />
+    <Compile Include="Dusts\Spark.cs" />
+    <Compile Include="Dusts\Sparkle.cs" />
+    <Compile Include="Dusts\SpectreDust.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Items\Accessories\GodModeShield.cs" />
+    <Compile Include="Items\Accessories\PrometheusShield.cs" />
+    <Compile Include="Items\Armors\Magic\DemonicFairyBattlerobe.cs" />
+    <Compile Include="Items\Armors\Magic\DemonicFairyHat.cs" />
+    <Compile Include="Items\Armors\Magic\DemonicFairyBoots.cs" />
+    <Compile Include="Items\Armors\Melee\BerserkerBreastplate.cs" />
+    <Compile Include="Items\Armors\Melee\BerserkerHelm.cs" />
+    <Compile Include="Items\Armors\Melee\BerserkerLegs.cs" />
+    <Compile Include="Items\Armors\Range\HuntsmanBreastplate.cs" />
+    <Compile Include="Items\Armors\Range\HuntsmanHelm.cs" />
+    <Compile Include="Items\Armors\Range\HuntsmanLegs.cs" />
+    <Compile Include="Items\Armors\Summon\RailwaymanBody.cs" />
+    <Compile Include="Items\Armors\Summon\RailwaymanHat.cs" />
+    <Compile Include="Items\Armors\Summon\RailwaymanBoot.cs" />
+    <Compile Include="Items\Materials\RailwaymanBar.cs" />
+    <Compile Include="Items\Materials\DemonicFairyBar.cs" />
+    <Compile Include="Items\Materials\HuntsmanBar.cs" />
+    <Compile Include="Items\Materials\BerserkerBar.cs" />
+    <Compile Include="Items\Materials\GodOreBar.cs" />
+    <Compile Include="Items\Mounts\DrilMount.cs" />
+    <Compile Include="Items\Mounts\StrangeCoal.cs" />
+    <Compile Include="Items\Pets\TheChestPet.cs" />
+    <Compile Include="Items\Placeable\TransmutationTable.cs" />
+    <Compile Include="Items\Placeable\GodOre.cs" />
+    <Compile Include="Items\Mining\RavenPickaxe.cs" />
+    <Compile Include="Items\Placeable\GodAnvil.cs" />
+    <Compile Include="Items\Placeable\GodFurnace.cs" />
+    <Compile Include="Items\Tools\Debuger.cs" />
+    <Compile Include="Items\Tools\SoulNet.cs" />
+    <Compile Include="Items\Tools\TheLazyFishingPole.cs" />
+    <Compile Include="Items\Tools\Timechanger.cs" />
+    <Compile Include="Items\Tools\GhostwalkerHammer.cs" />
+    <Compile Include="Items\Tools\FaithkeeperHammer.cs" />
+    <Compile Include="Items\Usable\MonsterSoul.cs" />
+    <Compile Include="Items\Weapons\Magic\GhostlyBarrier.cs" />
+    <Compile Include="Items\Weapons\Magic\HiveFive.cs" />
+    <Compile Include="Items\Weapons\Magic\TheMayhemTome.cs" />
+    <Compile Include="Items\Weapons\Magic\TomeNecromancy.cs" />
+    <Compile Include="Items\Weapons\Magic\ImpulseStrikeTome.cs" />
+    <Compile Include="Items\Weapons\Melee\FrostmourneBlade.cs" />
+    <Compile Include="Items\Weapons\Melee\BerserkerBlade.cs" />
+    <Compile Include="Items\Weapons\Melee\GunBladeSword.cs" />
+    <Compile Include="Items\Weapons\Melee\CorruptionKnifes.cs" />
+    <Compile Include="Items\Weapons\Melee\KatachimiSword.cs" />
+    <Compile Include="Items\Weapons\Melee\DragonSword.cs" />
+    <Compile Include="Items\Weapons\Range\DevBow.cs" />
+    <Compile Include="Items\Weapons\Range\HuntmanBow.cs" />
+    <Compile Include="Items\Weapons\Range\VigilenteShotgun.cs" />
+    <Compile Include="Items\Weapons\Range\OmegaShark.cs" />
+    <Compile Include="Items\Weapons\Summon\ThomasWhistle.cs" />
+    <Compile Include="Items\Wings\DemonicFairyWings.cs" />
+    <Compile Include="Items\Wings\HuntsmanWings.cs" />
+    <Compile Include="Items\Wings\GreenDragonWings.cs" />
+    <Compile Include="Mounts\Drill.cs" />
+    <Compile Include="Mounts\Train.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="GodsRevenge.cs" />
+    <Compile Include="Items\Mining\DevPickaxe.cs" />
+    <Compile Include="Items\Pets\ExamplePet.cs" />
+    <Compile Include="Projectiles\AimbotArrow.cs" />
+    <Compile Include="Projectiles\ElementLaser.cs" />
+    <Compile Include="Projectiles\EnergizedBall.cs" />
+    <Compile Include="Projectiles\GhostlyBarrier.cs" />
+    <Compile Include="Projectiles\Minions\HoverShooter.cs" />
+    <Compile Include="Projectiles\Minions\Minion.cs" />
+    <Compile Include="Projectiles\Minions\PurityBolt.cs" />
+    <Compile Include="Projectiles\Minions\ThomasEngineAI.cs" />
+    <Compile Include="Projectiles\Minions\ThomasHeadMinion.cs" />
+    <Compile Include="Projectiles\Minions\WagonBody2Minion.cs" />
+    <Compile Include="Projectiles\Minions\WagonBodyMinion.cs" />
+    <Compile Include="Projectiles\Minions\WagonTailMinion.cs" />
+    <Compile Include="Projectiles\NecroScythes.cs" />
+    <Compile Include="Projectiles\Pets\ExamplePet.cs" />
+    <Compile Include="Projectiles\Pets\TheChestPet.cs" />
+    <Compile Include="Projectiles\ShadowArm.cs" />
+    <Compile Include="Projectiles\Test.cs" />
+    <Compile Include="Projectiles\TheLazyBobber.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeHelper.cs" />
+    <Compile Include="Sounds\Mount\ChooChoo.cs" />
+    <Compile Include="Tiles\GodAnvil.cs" />
+    <Compile Include="Tiles\TransmutationTable.cs" />
+    <Compile Include="Tiles\GodFurnace.cs" />
+    <Compile Include="Tiles\GodOre.cs" />
+    <Compile Include="World.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Buffs\GhostlyBarrierBuff.png" />
+    <Content Include="Buffs\InvincibilityBuff.png" />
+    <Content Include="Buffs\DrillMount.png" />
+    <Content Include="Dusts\BlackSmoke.png" />
+    <Content Include="Items\Accessories\GodModeShield.png" />
+    <Content Include="Items\Accessories\GodModeShield_Shield.png" />
+    <Content Include="Items\Accessories\PrometheusShield_Shield.png" />
+    <Content Include="Items\Mounts\DrillMount.png" />
+    <Content Include="Items\Placeable\TransmutationTable.png" />
+    <Content Include="Items\Tools\Debuger.png" />
+    <Content Include="Items\Tools\SoulNet.png" />
+    <Content Include="Items\Tools\TheLazyFishingPole.png" />
+    <Content Include="Items\Usable\MonsterSoul.png" />
+    <Content Include="Items\Weapons\Magic\HiveFive.png" />
+    <Content Include="Mounts\Drill_Back.png" />
+    <Content Include="Mounts\Drill_Front.png" />
+    <Content Include="Projectiles\AimbotArrow.png" />
+    <Content Include="Projectiles\ArkalistBlade.png" />
+    <Content Include="Projectiles\debug.png" />
+    <Content Include="Projectiles\ElementLaser.png" />
+    <Content Include="Projectiles\EnergizedBall.png" />
+    <Content Include="Projectiles\GhostlyBarrier.png" />
+    <Content Include="Projectiles\Link.png" />
+    <Content Include="Projectiles\Minions\PurityBolt.png" />
+    <Content Include="Projectiles\Minions\ThomasHeadMinion.png" />
+    <Content Include="Projectiles\Minions\WagonBody2Minion.png" />
+    <Content Include="Projectiles\Minions\WagonBody2Minionold.png" />
+    <Content Include="Projectiles\Minions\WagonBodyMinion.png" />
+    <Content Include="Projectiles\Minions\WagonBodyMinionold.png" />
+    <Content Include="Projectiles\Minions\WagonTailMinion.png" />
+    <Content Include="Projectiles\Minions\WagonTailMinionold.png" />
+    <Content Include="Projectiles\NecroScythes.png" />
+    <Content Include="Projectiles\Pets\ChestyPet3.png" />
+    <Content Include="Projectiles\Pets\ChestyPet5.png" />
+    <Content Include="Projectiles\Pets\ExamplePet.png" />
+    <Content Include="Projectiles\Pets\NPC_473.png" />
+    <Content Include="Projectiles\Pets\Projectile_236.png" />
+    <Content Include="Projectiles\Pets\TheChestPet.png" />
+    <Content Include="Projectiles\Pets\TheChestPetBack.png" />
+    <Content Include="Projectiles\Pets\TheChestPetTest.png" />
+    <Content Include="Projectiles\ShadowArm.png" />
+    <Content Include="Projectiles\Test.png" />
+    <Content Include="Projectiles\test1.png" />
+    <Content Include="Projectiles\Test2.png" />
+    <Content Include="Projectiles\test3.png" />
+    <Content Include="Projectiles\test4.png" />
+    <Content Include="Projectiles\test5.png" />
+    <Content Include="Projectiles\TheLazyBobber.png" />
+    <Content Include="Sounds\Mount\ChooChoo.mp3" />
+    <Content Include="Buffs\TheChestPetBuff.png" />
+    <Content Include="Buffs\TrainMount.png" />
+    <Content Include="Buffs\ExamplePetBuff.png" />
+    <Content Include="Buffs\ThomasMinionBuff.png" />
+    <Content Include="Dusts\Bubble.png" />
+    <Content Include="Dusts\EtherealFlame.png" />
+    <Content Include="Dusts\ExampleSolution.png" />
+    <Content Include="Dusts\Flame.png" />
+    <Content Include="Dusts\MoneyDust.png" />
+    <Content Include="Dusts\Negative.png" />
+    <Content Include="Dusts\Pixel.png" />
+    <Content Include="Dusts\PuriumFlame.png" />
+    <Content Include="Dusts\Smoke.png" />
+    <Content Include="Dusts\Sparkle.png" />
+    <Content Include="Dusts\Spark.png" />
+    <Content Include="Dusts\SpectreDust.png" />
+    <Content Include="Dusts\WilliamDust.png" />
+    <Content Include="Items\Accessories\PrometheusShield.png" />
+    <Content Include="Items\Armors\Magic\DemonicFairyBattlerobe_Arms.png" />
+    <Content Include="Items\Armors\Magic\DemonicFairyBattlerobe_FemaleBody.png" />
+    <Content Include="Items\Armors\Magic\DemonicFairyBattlerobe_Body.png" />
+    <Content Include="Items\Armors\Magic\DemonicFairyBoots_Legs.png" />
+    <Content Include="Items\Armors\Magic\DemonicFairyBattlerobe.png" />
+    <Content Include="Items\Armors\Magic\DemonicFairyBoots.png" />
+    <Content Include="Items\Armors\Magic\DemonicFairyHat_Head.png" />
+    <Content Include="Items\Armors\Magic\DemonicFairyHat.png" />
+    <Content Include="Items\Armors\Melee\BerserkerBreastplate_Arms.png" />
+    <Content Include="Items\Armors\Melee\BerserkerBreastplate_FemaleBody.png" />
+    <Content Include="Items\Armors\Melee\BerserkerBreastplate_Body.png" />
+    <Content Include="Items\Armors\Melee\BerserkerBreastplate.png" />
+    <Content Include="Items\Armors\Melee\BerserkerLegs_Legs.png" />
+    <Content Include="Items\Armors\Melee\BerserkerLegs.png" />
+    <Content Include="Items\Armors\Melee\BerserkerHelm_Head.png" />
+    <Content Include="Items\Armors\Melee\BerserkerHelm.png" />
+    <Content Include="Items\Armors\Range\HuntsmanLegs_Legs.png" />
+    <Content Include="Items\Armors\Range\HuntsmanHelm_Head.png" />
+    <Content Include="Items\Armors\Range\HuntsmanBreastplate_Arms.png" />
+    <Content Include="Items\Armors\Range\HuntsmanBreastplate_Body.png" />
+    <Content Include="Items\Armors\Range\HuntsmanBreastplate_FemaleBody.png" />
+    <Content Include="Items\Armors\Range\HuntsmanLegs.png" />
+    <Content Include="Items\Armors\Range\HuntsmanHelm.png" />
+    <Content Include="Items\Armors\Range\HuntsmanBreastplate.png" />
+    <Content Include="Items\Armors\Summon\RailwaymanBody.png" />
+    <Content Include="Items\Armors\Summon\RailwaymanBody_Arms.png" />
+    <Content Include="Items\Armors\Summon\RailwaymanBody_Body.png" />
+    <Content Include="Items\Armors\Summon\RailwaymanBody_FemaleBody.png" />
+    <Content Include="Items\Armors\Summon\RailwaymanBoot.png" />
+    <Content Include="Items\Armors\Summon\RailwaymanBoot_Legs.png" />
+    <Content Include="Items\Armors\Summon\RailwaymanHat.png" />
+    <Content Include="Items\Armors\Summon\RailwaymanHat_Head.png" />
+    <Content Include="Items\Materials\RailwaymanBar.png" />
+    <Content Include="Items\Materials\DemonicFairyBar.png" />
+    <Content Include="Items\Materials\HuntsmanBar.png" />
+    <Content Include="Items\Materials\BerserkerBar.png" />
+    <Content Include="Items\Mounts\StrangeCoal.png" />
+    <Content Include="Items\Pets\TheChestPet.png" />
+    <Content Include="Items\Placeable\GodOre.png" />
+    <Content Include="Items\Materials\GodOreBar.png" />
+    <Content Include="Items\Mining\RavenPickaxe.png" />
+    <Content Include="Items\Mining\DevPickaxe.png" />
+    <Content Include="Items\Placeable\GodAnvil.png" />
+    <Content Include="Items\Placeable\GodFurnace.png" />
+    <Content Include="Items\Tools\GhostwalkerHammer.png" />
+    <Content Include="Items\Tools\FaithkeeperHammer.png" />
+    <Content Include="Items\Tools\Timechanger.png" />
+    <Content Include="Items\Weapons\Magic\ImpulseStrikeTome.png" />
+    <Content Include="Items\Weapons\Magic\TheMayhemTome.png" />
+    <Content Include="Items\Weapons\Magic\TomeNecromancy.png" />
+    <Content Include="Items\Weapons\Magic\GhostlyBarrier.png" />
+    <Content Include="Items\Weapons\Melee\BerserkerBlade.png" />
+    <Content Include="Items\Weapons\Melee\DragonSword.png" />
+    <Content Include="Items\Weapons\Melee\FrostmourneBlade.png" />
+    <Content Include="Items\Weapons\Melee\KatachimiSword.png" />
+    <Content Include="Items\Weapons\Melee\GunBladeSword.png" />
+    <Content Include="Items\Weapons\Melee\CorruptionKnifes.png" />
+    <Content Include="Items\Weapons\Range\DevBow.png" />
+    <Content Include="Items\Weapons\Range\HuntmanBow.png" />
+    <Content Include="Items\Weapons\Range\OmegaShark.png" />
+    <Content Include="Items\Weapons\Range\VigilenteShotgun.png" />
+    <Content Include="Items\Weapons\Summon\ThomasWhistle.png" />
+    <Content Include="Items\Pets\ExamplePet.png" />
+    <Content Include="Items\Wings\HuntsmanWings.png" />
+    <Content Include="Items\Wings\DemonicFairyWings.png" />
+    <Content Include="Items\Wings\GreenDragonWings.png" />
+    <Content Include="Items\Wings\GreenDragonWings_Wings.png" />
+    <Content Include="Items\Wings\HuntsmanWings_Wings.png" />
+    <Content Include="Items\Wings\DemonicFairyWings_Wings.png" />
+    <Content Include="Mounts\Train_Back.png" />
+    <Content Include="Mounts\Train_Front.png" />
+    <Content Include="Tiles\GodAnvil.png" />
+    <Content Include="Tiles\GodFurnace.png" />
+    <Content Include="Tiles\GodOre.png" />
+    <Content Include="Tiles\TransmutationTable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NPCs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"D:\Steam Library\steamapps\common\Terraria\tModLoaderServer.exe" -build "$(ProjectDir)\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+-->
+</Project>
